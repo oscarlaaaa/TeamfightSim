@@ -38,15 +38,13 @@ public class App {
     
     public static void main(String[] args) {
         
-
+        Champion.protoChamp1();
+        Champion.protoChamp2();
+        
         
         Clock time1 = new Clock();
         time1.gameTime();
     }
     
-    public void createProto() {
-        Champion champ1 = new Champion("Tien Tran", 500, 500, 100);
-        Champion champ2 = new Champion("Clsoccer101", 1000, 200, 200);
-    }
 }
 

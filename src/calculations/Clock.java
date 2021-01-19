@@ -15,7 +15,7 @@ class Task extends TimerTask{
         if(count < 250) {
             // will be replaced with damage incrementing method
             while(champ1.state == "Alive" && champ2.state == "Alive") {
-               // nextAttack(champ1, champ2); how come it doesn't work?
+               Damage.nextAttack(champ1, champ2);
             }
 
         } else {

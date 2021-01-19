@@ -39,12 +39,12 @@ public class Champion {
     }
     
     // Creates demo champ1
-    public void protoChamp1() {
+    public static void protoChamp1() {
         Champion champ1 = new Champion("Tien Tran", 500, 500, 100);
     }
     
     // Creates demo champ2
-    public void protoChamp2() {
+    public static void protoChamp2() {
         Champion champ2 = new Champion("Clsoccer101", 1000, 200, 200);
     }
     /*******************
