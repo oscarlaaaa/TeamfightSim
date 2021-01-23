@@ -38,12 +38,8 @@ public class App {
     
     public static void main(String[] args) {
         
-        Champion.protoChamp1();
-        Champion.protoChamp2();
-        
-        
         Clock time1 = new Clock();
-        time1.gameTime();
+        time1.gameTime();  // starts the incremental program
     }
     
 }

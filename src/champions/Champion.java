@@ -25,6 +25,7 @@ public class Champion {
             int as 
             //int rng
             ){
+        this.name = name;
         this.maxHealth = hp;
         this.curHealth = hp;
         this.state = "Alive";
@@ -38,18 +39,13 @@ public class Champion {
         
     }
     
-    // Creates demo champ1
-    public static void protoChamp1() {
-        Champion champ1 = new Champion("Tien Tran", 500, 500, 100);
-    }
-    
-    // Creates demo champ2
-    public static void protoChamp2() {
-        Champion champ2 = new Champion("Clsoccer101", 1000, 200, 200);
-    }
+
     /*******************
      * GETTERS
      *******************/
+    public String getName() {
+        return name;
+    }
     
     public int getMaxHealth() {
         return maxHealth;
