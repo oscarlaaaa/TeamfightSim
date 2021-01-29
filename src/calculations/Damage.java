@@ -41,7 +41,7 @@ public class Damage {
     // Check if champion is alive or not
     public static void checkDead(Champion champ) {
         if (champ.curHealth <= 0) {
-            champ.state = "Dead";
+            champ.state = false;
         }
     }
     

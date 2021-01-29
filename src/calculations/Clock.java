@@ -13,13 +13,13 @@ class Task extends TimerTask{
     
     public void run() {
         
-         if(champ1.state == "Alive" && champ2.state == "Alive"
+         if(champ1.state == true && champ2.state == true
                  && count < 2500) {
             Damage.nextAttack(champ1, champ2);
             count++;
             System.out.println(count);
          } else {
-             if(champ1.state == "Dead") {
+             if(champ1.state == false) {
              System.out.println(champ2.getName() + " has won!");
              System.exit(0);
              } else {
@@ -36,7 +36,7 @@ public class Clock {
         Timer timer1 = new Timer();
         TimerTask task = new Task();
         
-        timer1.scheduleAtFixedRate(task, 0, 100); // Controls the rate that it increments
+        timer1.scheduleAtFixedRate(task, 0, 50); // Controls the rate that it increments
         
         System.out.println("running...");
     }

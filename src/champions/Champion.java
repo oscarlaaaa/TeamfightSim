@@ -3,7 +3,7 @@ package champions;
 public class Champion {
     
     String name;
-    public String state;
+    public boolean state;
     int maxHealth;
     public int curHealth;
     //int mana; later
@@ -28,7 +28,7 @@ public class Champion {
         this.name = name;
         this.maxHealth = hp;
         this.curHealth = hp;
-        this.state = "Alive";
+        this.state = true;
         //this.mana = mp; later
         this.damage = dmg;
         //this.armour = arm;

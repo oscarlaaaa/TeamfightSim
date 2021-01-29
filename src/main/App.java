@@ -7,40 +7,43 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.scene.text.Text;
+import javafx.geometry.Pos;
 import calculations.*;
-import champions.*;
 
-//public class App extends Application {
-//    
-//    public static void main(String[] args) {
-//        launch(args);
-//    }
-//    
-//    @Override
-//    public void start(Stage primaryStage) {
-//        primaryStage.setTitle("Hello World!");
-//        Button btn = new Button();
-//        btn.setText("Say 'Hello World'");
-//        btn.setOnAction(new EventHandler<ActionEvent>() {
-// 
-//            @Override
-//            public void handle(ActionEvent event) {
-//                System.out.println("Hello World!");
-//            }
-//        });
-//        
-//        StackPane root = new StackPane();
-//        root.getChildren().add(btn);
-//        primaryStage.setScene(new Scene(root, 300, 250));
-//        primaryStage.show();
-//        
-public class App {
+
+public class App extends Application {
     
     public static void main(String[] args) {
-        
-        Clock time1 = new Clock();
-        time1.gameTime();  // starts the incremental program
-    }
+        launch(args);
+
+        }
     
+    @Override
+    public void start(Stage primaryStage) {
+        primaryStage.setTitle("TFTUWU by Oscar La");
+        Button btn = new Button();
+        Text text = new Text(20, 20, "aaaa");
+        btn.setText("Start simulation");
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+ 
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Starting combat...");
+                Clock time1 = new Clock();
+                // starts the incremental program
+                time1.gameTime();  
+            }
+        });
+        
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+        root.getChildren().add(text);
+        StackPane.setAlignment(text, Pos.TOP_CENTER);
+        primaryStage.setScene(new Scene(root, 1000, 700));
+        primaryStage.show();
+    }
 }
+        
+
 
