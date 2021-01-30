@@ -14,7 +14,7 @@ class Task extends TimerTask{
     public void run() {
         
          if(champ1.state == true && champ2.state == true
-                 && count < 2500) {
+                 && count < 250) {
             Damage.nextAttack(champ1, champ2);
             count++;
             System.out.println(count);

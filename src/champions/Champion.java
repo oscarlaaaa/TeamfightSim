@@ -25,17 +25,17 @@ public class Champion {
             int as 
             //int rng
             ){
-        this.name = name;
-        this.maxHealth = hp;
-        this.curHealth = hp;
-        this.state = true;
-        //this.mana = mp; later
-        this.damage = dmg;
-        //this.armour = arm;
-        //this.resist = res; later
-        this.attSpeed = as;
-        this.nextAtt = as;
-        //this.range = rng; later
+            this.name = name;
+            this.maxHealth = hp;
+            this.curHealth = hp;
+            this.state = true;
+            //this.mana = mp; later
+            this.damage = dmg;
+            //this.armour = arm;
+            //this.resist = res; later
+            this.attSpeed = as;
+            this.nextAtt = as;
+            //this.range = rng; later
         
     }
     
