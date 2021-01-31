@@ -19,7 +19,7 @@ public class Champion {
     public Champion(String name, 
             int hp, 
             //int mp, 
-            int dmg, 
+            int att, 
             int arm, 
            // int res, 
             int as 
@@ -30,7 +30,7 @@ public class Champion {
             this.curHealth = hp;
             this.state = true;
             //this.mana = mp; later
-            this.attack = dmg;
+            this.attack = att;
             this.armour = arm;
             //this.resist = res; later
             this.attSpeed = as;

@@ -8,7 +8,7 @@ class Task extends TimerTask{
     
     public static int count = 0;
     Champion champ1 = new Champion("Tien Tran", 500, 50, 50, 7); // should win
-    Champion champ2 = new Champion("Clsoccer101", 1000, 25, 100, 5); // should lose
+    Champion champ2 = new Champion("Clsoccer101", 1000, 25, 50, 5); // should lose
     
     
     public void run() {
