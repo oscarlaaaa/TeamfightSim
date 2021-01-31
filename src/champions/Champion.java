@@ -7,7 +7,7 @@ public class Champion {
     int maxHealth;
     public int curHealth;
     //int mana; later
-    int damage;
+    int attack;
     int armour;
     //int resist; later
     int attSpeed;
@@ -20,7 +20,7 @@ public class Champion {
             int hp, 
             //int mp, 
             int dmg, 
-           // int arm, 
+            int arm, 
            // int res, 
             int as 
             //int rng
@@ -30,8 +30,8 @@ public class Champion {
             this.curHealth = hp;
             this.state = true;
             //this.mana = mp; later
-            this.damage = dmg;
-            //this.armour = arm;
+            this.attack = dmg;
+            this.armour = arm;
             //this.resist = res; later
             this.attSpeed = as;
             this.nextAtt = as;
@@ -51,8 +51,8 @@ public class Champion {
         return maxHealth;
     }
         
-    public int getDamage() {
-        return damage;
+    public int getAttack() {
+        return attack;
     }
     
     public int getArmour() {

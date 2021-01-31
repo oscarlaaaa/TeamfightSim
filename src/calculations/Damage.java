@@ -4,14 +4,22 @@ import champions.Champion;
 
 public class Damage {
     
+    // Calculates the damage reduction by armour; champ2 hitting champ1
+    static int damage(Champion champ1, Champion champ2) {
+        int hit;
+        float percent = (100 / (100 + champ1.getArmour()));
+        hit = (int) (champ1.getAttack() * percent);
+        return hit;
+    }
+    
     // Champ1 getting hit, champ2 doing the hitting
     static void takeHit(Champion champ1, Champion champ2) {
-        champ1.setCurHealth(champ1.curHealth - champ2.getDamage()); 
+        champ1.setCurHealth(champ1.curHealth - damage(champ1, champ2)); 
     }
     
     // Displays c1 getting hit by c2
     static void damageVoice(Champion c1, Champion c2) {
-        System.out.print(c1.getName() + " took " + c2.getDamage() 
+        System.out.print(c1.getName() + " took " + c2.getAttack() 
         + " damage! ");
         System.out.println(c1.getName() + " has " + c1.curHealth + 
                 " health remaining!" );
