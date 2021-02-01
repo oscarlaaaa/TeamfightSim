@@ -4,12 +4,31 @@ import champions.Champion;
 
 public class Damage {
     
+    // Calculates whether the attack will be a critical hit
+
+    static boolean yesCrit(Champion c1) {
+        double x = Math.random();
+        if (x <= c1.getCritChn()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     // Calculates the damage reduction by armour; champ2 hitting champ1
     static int damage(Champion c1, Champion c2) {
         float percent = (100.0f / (100.0f + c1.getArmour()));
         int hit = (int)(c2.getAttack() * percent);
+        
+        // Multiplies by critdmg if crit, else normal hit
+        if (yesCrit(c2)) {
+            hit *= c2.getCritDmg();
+            return hit;
+        } else {
         return hit;
+        }
     }
+    
     
     // Champ1 getting hit, champ2 doing the hitting
     static void takeHit(Champion c1, Champion c2) {
@@ -68,7 +87,4 @@ public class Damage {
             }
         }
     }
-    
-
-    
 }

@@ -7,12 +7,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.geometry.Pos;
+
+
 import calculations.*;
 
-
 public class App extends Application {
+    
     
     public static void main(String[] args) {
         launch(args);
@@ -23,7 +28,11 @@ public class App extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("TFTUWU by Oscar La");
         Button btn = new Button();
+        
         Text text = new Text(20, 20, "aaaa");
+        text.setFont(Font.font("verdana", FontWeight.BOLD, 
+                FontPosture.REGULAR, 50));
+        
         btn.setText("Start simulation");
         btn.setOnAction(new EventHandler<ActionEvent>() {
  
@@ -33,6 +42,7 @@ public class App extends Application {
                 Clock time1 = new Clock();
                 // starts the incremental program
                 time1.gameTime();  
+                
             }
         });
         
@@ -42,6 +52,8 @@ public class App extends Application {
         StackPane.setAlignment(text, Pos.TOP_CENTER);
         primaryStage.setScene(new Scene(root, 1000, 700));
         primaryStage.show();
+        
+        
     }
 }
         

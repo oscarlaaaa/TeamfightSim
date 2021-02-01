@@ -12,6 +12,8 @@ public class Champion {
     //int resist; later
     int attSpeed;
     public int nextAtt;
+    float critChance;
+    float critDamage;
     //int range; later
     //Champion[] targeted; later
     
@@ -35,6 +37,8 @@ public class Champion {
             //this.resist = res; later
             this.attSpeed = as;
             this.nextAtt = as;
+            this.critChance = 0.25f;
+            this.critDamage = 1.5f;
             //this.range = rng; later
         
     }
@@ -61,6 +65,14 @@ public class Champion {
     
     public int getAttSpeed() {
         return attSpeed;
+    }
+    
+    public float getCritChn() {
+        return critChance;
+    }
+    
+    public float getCritDmg() {
+        return critDamage;
     }
     
     /*******************
