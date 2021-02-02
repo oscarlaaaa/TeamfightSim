@@ -18,4 +18,5 @@ ROADMAP:
 -Add multiple-champion simultaneous combat <br/>
 -Incorporate skills maybe? that'd be hard <br/>
 -Set up a GUI for the application <br/>
+-Implement a program that reads the champion stats from online so no manual entering <br/>
 
