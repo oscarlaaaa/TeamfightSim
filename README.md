@@ -10,12 +10,13 @@ ROADMAP:
 -Set up champion class and calculation semantics <b>(DONE)</b> <br/>
 -Get an incremental system in place <b>(DONE)</b> <br/>
 -Set up a 1v1 combat system that increments, shows combat progress, and announces winner before terminating the program <b>(DONE)</b> <br/>
--Set up randomish damage system <br/>
--Incorporate armour <br/>
+-Set up randomish damage system (DONE) <br/>
+-Incorporate armour (DONE) <br/>
 -Figure out how to scale it up maybe? <br/>
 -Add champion synergies <br/>
 -Add items and effects <br/>
 -Add multiple-champion simultaneous combat <br/>
 -Incorporate skills maybe? that'd be hard <br/>
 -Set up a GUI for the application <br/>
+-Implement a program that reads the champion stats from online so no manual entering <br/>
 
