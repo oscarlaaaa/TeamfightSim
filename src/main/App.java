@@ -17,6 +17,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.scene.transform.Rotate;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 
 
@@ -24,8 +26,8 @@ import calculations.*;
 
 public class App extends Application {
     
-    double SCENE_HEIGHT = 720;
-    double SCENE_WIDTH = 1280;
+    final double SCENE_HEIGHT = 720;
+    final double SCENE_WIDTH = 1000;
     
     public static void main(String[] args) {
         launch(args);
@@ -41,23 +43,32 @@ public class App extends Application {
         
         
         Text text = new Text(20, 20, "aaaa");
+        Text text2 = new Text(20, 20, "bbbb");
+        Text text3 = new Text(20, 20, "penis");
+        Text text4 = new Text(20, 20, "aaaaa");
+        Text text5 = new Text(20, 20, "aazzzzaa");
+        
         text.setFont(Font.font("verdana", FontWeight.BOLD, 
                 FontPosture.REGULAR, 50));
         
+        
         StackPane p = new StackPane();
+        p.prefHeight(SCENE_HEIGHT);
+        p.prefWidth(SCENE_WIDTH);
+        p.getChildren().add(Hex.hexField());
 
-        StackPane.setAlignment(hexBackground(), Pos.TOP_CENTER);
-        //StackPane.setAlignment(btn, Pos.BOTTOM_CENTER);
-        //StackPane.setAlignment(text, Pos.TOP_CENTER);
+        GridPane g = new GridPane();
+        GridPane.setMargin(g, (new Insets(10, 10, 10, 10)));
+        g.add(text, 0, 0, 1, 1);
+        g.add(text2, 1, 1, 1, 1);
+        g.add(text3, 2, 2, 1, 1);
+        g.add(text4, 3, 5, 1, 1);
+        g.add(text5, 4, 4, 1, 1);
+        g.add(p, 3, 2, 2, 2);
+        g.setVgap(8);
+        g.setHgap(8);
         
-        //p.setPrefSize(SCENE_WIDTH, SCENE_HEIGHT);
-        p.getChildren().add(hexBackground());
-        //p.getChildren().add(text);
-        //p.getChildren().add(btn);
-
-        
-        
-        Group group = new Group(p);
+        Group group = new Group(g);
         
         btn.setText("Start simulation");
         btn.setOnAction(new EventHandler<ActionEvent>() {
@@ -84,29 +95,7 @@ public class App extends Application {
         
     }
     
-    private Group hexBackground() {
-        Group group = new Group();
-        
-        for (double i=0; i<7; i++) {
-            for (int n=0; n<8; n++) {
-                if (n % 2 == 0) {
-                group.getChildren().add(createCircle(i, n, Color.BLUE));
-                } else {
-                group.getChildren().add(createCircle(i+0.5, n, Color.GREEN));
-                }
-            }
-        }
-        
-        Line centerLine = new Line(0, 175, 400, 175);
-        group.getChildren().add(centerLine);
-        
-        return group; 
-    }
-    
-    private Circle createCircle(double x, int y, Color c) {
-        Circle a = new Circle((x * 50), (y * 50), 25, c);
-        return a;
-    }
+
 }
 
         
