@@ -5,7 +5,6 @@ import champions.Champion;
 public class Damage {
     
     // Calculates whether the attack will be a critical hit
-
     static boolean yesCrit(Champion c1) {
         double x = Math.random();
         if (x <= c1.getCritChn()) {
@@ -35,7 +34,7 @@ public class Damage {
         c1.setCurHealth(c1.curHealth - damage(c1, c2)); 
     }
     
-    // Displays c1 getting hit by c2
+    // Displays c1 getting hit by c2 (CAN DELETE AFTER FULLY IMPLEMENTED)
     static void damageVoice(Champion c1, Champion c2) {
         System.out.print(c1.getName() + " took " + damage(c1, c2) 
         + " damage! ");
@@ -56,7 +55,7 @@ public class Damage {
     // Check if champion is alive or not
     static void checkDead(Champion c) {
         if (c.curHealth <= 0) {
-            c.state = false;
+            c.setState(false);
         }
     }
     

@@ -59,14 +59,7 @@ public class App extends Application {
 
         GridPane g = new GridPane();
         GridPane.setMargin(g, (new Insets(10, 10, 10, 10)));
-        g.add(text, 0, 0, 1, 1);
-        g.add(text2, 1, 1, 1, 1);
-        g.add(text3, 2, 2, 1, 1);
-        g.add(text4, 3, 5, 1, 1);
-        g.add(text5, 4, 4, 1, 1);
         g.add(p, 3, 2, 2, 2);
-        g.setVgap(8);
-        g.setHgap(8);
         
         Group group = new Group(g);
         
@@ -92,10 +85,7 @@ public class App extends Application {
         
         primaryStage.show();
         
-        
     }
-    
-
 }
 
         

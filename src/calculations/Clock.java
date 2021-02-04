@@ -13,12 +13,12 @@ class Task extends TimerTask{
     
     public void run() {
         
-         if(champ1.state == true && champ2.state == true
+         if(champ1.getState() == true && champ2.getState() == true
                  && count < 250) {
             Damage.nextAttack(champ1, champ2);
             count++;
          } else {
-             if(champ1.state == false) {
+             if(champ1.getState() == false) {
              System.out.println(champ2.getName() + " has won!");
              System.exit(0);
              } else {
@@ -41,3 +41,5 @@ public class Clock {
     }
     
 }
+
+ 

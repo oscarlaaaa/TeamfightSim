@@ -1,9 +1,11 @@
 package champions;
 
+import items.Item;
+
 public class Champion {
     
     String name;
-    public boolean state;
+    boolean state;
     int maxHealth;
     public int curHealth;
     //int mana; later
@@ -16,6 +18,7 @@ public class Champion {
     float critDamage;
     //int range; later
     //Champion[] targeted; later
+    Item[] equipped = new Item[2];
     
     // Champion constructor
     public Champion(String name, 
@@ -49,6 +52,10 @@ public class Champion {
      *******************/
     public String getName() {
         return name;
+    }
+    
+    public boolean getState() {
+        return state;
     }
     
     public int getMaxHealth() {
@@ -86,7 +93,18 @@ public class Champion {
     public void setNextAtt(int next) {
         this.nextAtt = next;
     }
-
+    
+    public void setState(boolean state) {
+        this.state = state;
+    }
+    
+    public void setItem(Item[] equip, Item item) {
+        for (int i=0; i<equip.length; i++) {
+            if (equip[i] == null) {
+                equip[i] = item;
+            }
+        }
+    }
 }
 
 
