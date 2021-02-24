@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -31,8 +32,7 @@ public class App extends Application {
     
     public static void main(String[] args) {
         launch(args);
-
-        }
+    }
     
     @Override
     public void start(Stage primaryStage) {
@@ -77,7 +77,14 @@ public class App extends Application {
         });
         
         Scene scene = new Scene(group);
-        
+        scene.setOnMousePressed(new EventHandler<MouseEvent>() 
+        {
+          @Override
+          public void handle(MouseEvent event) {
+            System.out.println(event.getSceneX());
+            System.out.println(event.getSceneY());
+          }
+        });
         
         primaryStage.setScene(scene);
         primaryStage.setWidth(SCENE_WIDTH);

@@ -3,12 +3,15 @@ package items;
 public class Item {
     
     String name;
-    int addHp;
-    int addAtt;
-    int addArmour;
-    float addCritChn;
-    float addCritDmg;
-    int addAttSpd;
+    // attributes of the item
+    private int addHp;
+    private int addAtt;
+    private int addArmour;
+    private float addCritChn;
+    private float addCritDmg;
+    private int addAttSpd;
+    // special effects of the items (will be linked to methods)
+    private enum special {special1, special2, special3}
     
     public Item(String nm, int hp, int att, int armour, float critchn, float critdmg, int as) {
         this.name = nm;

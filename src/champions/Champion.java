@@ -1,51 +1,77 @@
 package champions;
 
+import java.awt.Point;
+import java.util.ArrayList;
 import items.Item;
 
 public class Champion {
     
-    String name;
-    boolean state;
-    int maxHealth;
-    public int curHealth;
+    private String name;
+    private int ID;
+    private boolean state;
+    private int maxHealth;
+    private int curHealth;
     //int mana; later
-    int attack;
-    int armour;
+    private int attack;
+    private int armour;
     //int resist; later
-    int attSpeed;
+    private int attSpeed;
     public int nextAtt;
-    float critChance;
-    float critDamage;
-    //int range; later
-    //Champion[] targeted; later
+    private float critChance;
+    private float critDamage;
+    private Champion target;
+    private ArrayList<Champion> targettedBy;
+    private int range; 
     Item[] equipped = new Item[2];
+    private Point position;
+    private int movement;
+    
     
     // Champion constructor
     public Champion(String name, 
             int hp, 
-            //int mp, 
             int att, 
             int arm, 
-           // int res, 
-            int as 
-            //int rng
+            int as,
+            int range
+            //int rng,
+            //int mp, 
+            //int res, 
+            
             ){
+        
             this.name = name;
+            this.ID = ID++;
             this.maxHealth = hp;
             this.curHealth = hp;
             this.state = true;
-            //this.mana = mp; later
             this.attack = att;
             this.armour = arm;
-            //this.resist = res; later
             this.attSpeed = as;
             this.nextAtt = as;
             this.critChance = 0.25f;
             this.critDamage = 1.5f;
+            this.position = null;
+            this.target = null;
+            this.targettedBy = new ArrayList<Champion>();
+            this.range = range;
+            this.movement = 550;
+            //this.mana = mp; later
+            //this.resist = res; later
             //this.range = rng; later
-        
     }
     
+    
+    // Template champion 1
+    public static Champion createTien() {
+        Champion tien = new Champion("tien", 1000, 50, 50, 5, 50);
+        return tien;
+    }
+    // Template champion 2
+    public static Champion createAlex() {
+        Champion alex = new Champion("alex", 2000, 30, 70, 10, 70);
+        return alex;
+    }
 
     /*******************
      * GETTERS
@@ -54,12 +80,20 @@ public class Champion {
         return name;
     }
     
+    public int getId() {
+        return ID;
+    }
+    
     public boolean getState() {
         return state;
     }
     
     public int getMaxHealth() {
         return maxHealth;
+    }
+    
+    public int getCurHealth() {
+        return curHealth;
     }
         
     public int getAttack() {
@@ -82,6 +116,22 @@ public class Champion {
         return critDamage;
     }
     
+    public Point getPosition() {
+        return position;
+    }
+    
+    public Champion getTarget() {
+        return target;
+    }
+    
+    public int getRange() {
+        return range;
+    }
+    
+    public double getMove() {
+        return movement;
+    }
+
     /*******************
      * SETTERS
      *******************/
@@ -104,6 +154,22 @@ public class Champion {
                 equip[i] = item;
             }
         }
+    }
+    
+    public void setPosition(Point p) {
+        this.position = p;
+    }
+
+    public void setTarget(Champion c) {
+        this.target = c;
+    }
+
+    public void addTargettedBy(Champion c) {
+        this.targettedBy.add(c);
+    }
+
+    public void removeTargettedBy(Champion c) {
+        this.targettedBy.remove(c);
     }
 }
 

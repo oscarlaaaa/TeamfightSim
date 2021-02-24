@@ -2,18 +2,17 @@ package calculations;
 
 import java.util.Timer;
 import java.util.TimerTask;
-import champions.*;
+import champions.Champion;
 
 class Task extends TimerTask{
     
     public static int count = 0;
-    Champion champ1 = new Champion("Tien Tran", 500, 50, 50, 7); // should win
-    Champion champ2 = new Champion("Clsoccer101", 1000, 25, 50, 5); // should lose
     
     
     public void run() {
-        
-         if(champ1.getState() == true && champ2.getState() == true
+        Champion.createTien();
+        Champion.createAlex();
+         if(tien.getState() == true && alex.getState() == true
                  && count < 250) {
             Damage.nextAttack(champ1, champ2);
             count++;
