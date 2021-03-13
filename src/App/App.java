@@ -1,4 +1,4 @@
-package main;
+package App;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -9,18 +9,12 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import javafx.scene.transform.Rotate;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 
 
 import calculations.*;
@@ -94,7 +88,3 @@ public class App extends Application {
         
     }
 }
-
-        
-
-
