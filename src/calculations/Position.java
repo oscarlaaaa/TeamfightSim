@@ -29,7 +29,7 @@ public class Position {
         return angle;
     }
     
-    private static double getDistance(Champion c1, Champion c2) {
+    public static double getDistance(Champion c1, Champion c2) {
         Point myPos = c1.getPosition();
         Point enemyPos = c1.getPosition();
         

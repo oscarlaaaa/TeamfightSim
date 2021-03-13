@@ -10,7 +10,7 @@ public class Item {
     private float addCritChn;
     private float addCritDmg;
     private int addAttSpd;
-    // special effects of the items (will be linked to methods)
+    // special effects of the items (will be linked to methods thru a switch)
     private enum special {special1, special2, special3}
     
     public Item(String nm, int hp, int att, int armour, float critchn, float critdmg, int as) {

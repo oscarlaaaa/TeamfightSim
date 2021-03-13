@@ -10,18 +10,18 @@ class Task extends TimerTask{
     
     
     public void run() {
-        Champion.createTien();
-        Champion.createAlex();
+        Champion tien = Champion.createTien();
+        Champion alex = Champion.createAlex();
          if(tien.getState() == true && alex.getState() == true
                  && count < 250) {
-            Damage.nextAttack(champ1, champ2);
+            Damage.nextAttack(tien, alex);
             count++;
          } else {
-             if(champ1.getState() == false) {
-             System.out.println(champ2.getName() + " has won!");
+             if(tien.getState() == false) {
+             System.out.println(alex.getName() + " has won!");
              System.exit(0);
              } else {
-                 System.out.println(champ1.getName() + " has won!");
+                 System.out.println(tien.getName() + " has won!");
                  System.exit(0);
                  }
              }

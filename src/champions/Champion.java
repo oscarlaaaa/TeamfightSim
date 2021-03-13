@@ -34,7 +34,6 @@ public class Champion {
             int arm, 
             int as,
             int range
-            //int rng,
             //int mp, 
             //int res, 
             
@@ -55,7 +54,7 @@ public class Champion {
             this.target = null;
             this.targettedBy = new ArrayList<Champion>();
             this.range = range;
-            this.movement = 550;
+            this.movement = 50;
             //this.mana = mp; later
             //this.resist = res; later
             //this.range = rng; later
@@ -171,6 +170,8 @@ public class Champion {
     public void removeTargettedBy(Champion c) {
         this.targettedBy.remove(c);
     }
+
+    
 }
 
 
